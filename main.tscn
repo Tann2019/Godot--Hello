@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bmgg3unclmto"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+offset_left = 270.0
+offset_top = 126.0
+offset_right = 384.0
+offset_bottom = 149.0
+text = "New Text Here"
