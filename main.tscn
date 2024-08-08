@@ -1,10 +1,40 @@
-[gd_scene format=3 uid="uid://bmgg3unclmto"]
+[gd_scene load_steps=3 format=3 uid="uid://bmgg3unclmto"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_6cjtp"]
+lifetime_randomness = 0.64
+particle_flag_disable_z = true
+angle_min = 16.2
+angle_max = 323.6
+gravity = Vector3(0, 98, 0)
+scale_min = 3.7
+scale_max = 31.86
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_1gl1i"]
 
 [node name="Node2D" type="Node2D"]
 
 [node name="Label" type="Label" parent="."]
-offset_left = 270.0
-offset_top = 126.0
-offset_right = 384.0
-offset_bottom = 149.0
+offset_left = 294.0
+offset_top = 145.0
+offset_right = 408.0
+offset_bottom = 168.0
 text = "New Text Here"
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="Label"]
+position = Vector2(56, -73)
+amount = 18
+emission_shape = 1
+emission_sphere_radius = 92.26
+direction = Vector2(50, 0)
+spread = 119.55
+angle_min = 421.8
+angle_max = 450.9
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+position = Vector2(644, 233)
+amount = 16
+process_material = SubResource("ParticleProcessMaterial_6cjtp")
+texture = SubResource("PlaceholderTexture2D_1gl1i")
+lifetime = 13.77
+explosiveness = 0.42
+randomness = 0.49
